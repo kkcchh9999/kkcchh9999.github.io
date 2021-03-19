@@ -3,17 +3,16 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | 코딩 연습</title>
+  <title>A+B | 코딩 연습</title>
   <meta name="author" content="John Doe">
   
-  <meta name="description" content="문제Hello World, 2557번Hello World를 출력하시오   
+  <meta name="description" content="문제A + B, 1000번A와 B를 입력받아서 A+B를 출력하시오
 
-풀이 과정C++ 로 알고리즘 공부를 진행할 예정이고, 아주 간단한 출력문이라 알고리즘에 대한 분석 보다는 C++ 문법에 대한 이해를 더 중요시 하였다.    
-C++에 대한 지식이 전혀 없어서">
+풀이 과정아직 알고리즘에 대하여 생각할 부분은 전혀 없기 때문에, C++ 문법을 익히는데 중점을 두었고, using namespace를 통하여 std를 매번 선언하지 않아도 되도록 하는 방법을 사용하였">
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Hello World"/>
+  <meta property="og:title" content="A+B"/>
   <meta property="og:site_name" content="코딩 연습"/>
 
   
@@ -49,38 +48,43 @@ C++에 대한 지식이 전혀 없어서">
 <div class="clearfix"></div>
 </header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article id="post-Hello World" class="h-entry post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article id="post-A-B" class="h-entry post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   
   <div class="post-content">
     <header>
       
         <div class="icon"></div>
-        <time class="dt-published" datetime="2021-03-19T15:28:31.000Z"><a href="/2021/03/19/Hello%20World/">2021-03-19</a></time>
+        <time class="dt-published" datetime="2021-03-19T16:45:23.000Z"><a href="/2021/03/19/A-B/">2021-03-19</a></time>
       
       
   
-    <h1 class="p-name title" itemprop="headline name">Hello World</h1>
+    <h1 class="p-name title" itemprop="headline name">A+B</h1>
   
 
     </header>
     <div class="e-content entry" itemprop="articleBody">
       
-        <h3 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h3><h5 id="Hello-World-2557번"><a href="#Hello-World-2557번" class="headerlink" title="Hello World, 2557번"></a>Hello World, 2557번</h5><p>Hello World를 출력하시오   </p>
+        <h3 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h3><h5 id="A-B-1000번"><a href="#A-B-1000번" class="headerlink" title="A + B, 1000번"></a>A + B, 1000번</h5><p>A와 B를 입력받아서 A+B를 출력하시오</p>
 <hr>
-<h3 id="풀이-과정"><a href="#풀이-과정" class="headerlink" title="풀이 과정"></a>풀이 과정</h3><p>C++ 로 알고리즘 공부를 진행할 예정이고, 아주 간단한 출력문이라 알고리즘에 대한 분석 보다는 C++ 문법에 대한 이해를 더 중요시 하였다.    </p>
-<p>C++에 대한 지식이 전혀 없어서 검색을 통하여 출력 문법을 알아보았다.  </p>
+<h3 id="풀이-과정"><a href="#풀이-과정" class="headerlink" title="풀이 과정"></a>풀이 과정</h3><p>아직 알고리즘에 대하여 생각할 부분은 전혀 없기 때문에, C++ 문법을 익히는데 중점을 두었고, using namespace를 통하여 std를 매번 선언하지 않아도 되도록 하는 방법을 사용하였고, cout과 cin을 이용하여 입출력을 처리하였다</p>
 <hr>
 <h3 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h3><pre><code>#include &lt;iostream&gt;
 
 int main()
 &#123;
-    std::cout &lt;&lt; &quot;Hello World!&quot;;
+    using namespace std;
     
+    int x = 0, y = 0;
+    cin &gt;&gt; x;
+    cin &gt;&gt; y;
+    
+    cout &lt;&lt; x+y;
+
     return 0;
 &#125;
 </code></pre>
 <hr>
-<h3 id="소감"><a href="#소감" class="headerlink" title="소감"></a>소감</h3><p>처음 접하는 C++이고, C랑은 기초 문법을 공유한다고 들었는데, 간단한 출력부터 생각보다 많이 다른 모습에 당황했지만, 아직은 큰 난관을 겪지 못했고, 계속 열심히 진행 할 생각이다. </p>
+<h3 id="소감"><a href="#소감" class="headerlink" title="소감"></a>소감</h3><p>cout과 cin이란 함수 이름이 생각보다 직관성이 있어서 printf와 scanf에만 익숙해 져 있었는데 생각보다 쉽게 적응 할 수 있었던 것 같다. using namespace는 상당히 유용한 기능인 것 같으니 꼭 숙지해 두어야겠다.</p>
 
       
     </div>
@@ -116,7 +120,7 @@ int main()
   }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<div class="fb-comments" data-href="http://example.com/2021/03/19/Hello%20World/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+<div class="fb-comments" data-href="http://example.com/2021/03/19/A-B/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
       
   
 </section>
