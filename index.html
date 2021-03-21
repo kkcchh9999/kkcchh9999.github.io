@@ -45,6 +45,62 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
+  <article id="post-A-B-7" class="h-entry post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time class="dt-published" datetime="2021-03-21T04:11:02.000Z"><a href="/2021/03/21/A-B-7/">2021-03-21</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2021/03/21/A-B-7/">A+B-7</a></h1>
+  
+
+    </header>
+    <div class="e-content entry" itemprop="articleBody">
+      
+        <h3 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h3><h5 id="A-B-7-11021번"><a href="#A-B-7-11021번" class="headerlink" title="A+B - 7, 11021번"></a>A+B - 7, 11021번</h5><p>두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.<br>입력 : 첫째 줄에 테스트 케이스의 개수 T가 주어진다.<br>각 테스트 케이스는 한 줄로 이루어져 있으며, 각 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10)<br>출력 : 각 테스트 케이스마다 “Case #x: “를 출력한 다음, A+B를 출력한다. 테스트 케이스 번호는 1부터 시작한다.</p>
+<hr>
+<h3 id="풀이-과정"><a href="#풀이-과정" class="headerlink" title="풀이 과정"></a>풀이 과정</h3><p>for루프와 cin, cout을 이용한 간단한 문제이다. 출력할 때 Case #t: 를 앞에 출력해야 한다는 점만 다를 뿐, 여태까지 했던 문제와 비슷한 유형의 문제였다. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cout &lt;&lt; &quot;Case &quot; &lt;&lt; t &lt;&lt; &quot;: &quot; &lt;&lt; A + B &lt;&lt; endl;</span><br></pre></td></tr></table></figure>
+<p>를 이용하여 해결했다.</p>
+<hr>
+<h3 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h3><pre><code>#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+&#123;
+    int t, a, b;
+    cin &gt;&gt; t;
+    for (int i = 1; i &lt;= t; i++)
+    &#123;
+        cin &gt;&gt; a &gt;&gt; b;
+        cout &lt;&lt; &quot;Case #&quot; &lt;&lt; i &lt;&lt;&quot;: &quot; &lt;&lt; a + b &lt;&lt; endl;
+    &#125;
+   
+&#125;
+</code></pre>
+<hr>
+<h3 id="소감"><a href="#소감" class="headerlink" title="소감"></a>소감</h3><p>이번 문제는 오히려 전 문제보다 쉬웠다고 생각이 든다. 아직까지는 자신감을 잃지 않고 계속 공부해 나갈만한 것 같다.</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
   <article id="post-main" class="h-entry post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   
   <div class="post-content">
@@ -389,7 +445,7 @@ int main()
   
     <li><a href="/tags/%EB%A9%94%EC%9D%B8/">메인</a><small>1</small></li>
   
-    <li><a href="/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">알고리즘</a><small>5</small></li>
+    <li><a href="/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">알고리즘</a><small>6</small></li>
   
   </ul>
 </div>
