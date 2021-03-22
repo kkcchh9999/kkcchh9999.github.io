@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  
+  <title>별 찍기-8 | 코딩 연습</title>
+  <meta name="author" content="CheolHyeon">
+  
+  <meta name="description" content="문제별 찍기-8, 2445번예제를 보고 규칙을 유추한 뒤에 별을 찍어 보세요.입력 : 5출력 : 
+123456789*        ***      *****    *******  ******************  *******    *****      ***     ">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="별 찍기-8"/>
+  <meta property="og:site_name" content="코딩 연습"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link rel="shortcut icon" href="/favicon.png">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">코딩 연습</a></h1>
+  <h2><a href="/">알고리즘, 과제, 프로젝트 모음</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="https://kkcchh9999.github.io/tags/%EB%A9%94%EC%9D%B8/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article id="post-2445" class="h-entry post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time class="dt-published" datetime="2021-03-22T05:15:54.000Z"><a href="/2021/03/22/2445/">2021-03-22</a></time>
+      
+      
+  
+    <h1 class="p-name title" itemprop="headline name">별 찍기-8</h1>
+  
+
+    </header>
+    <div class="e-content entry" itemprop="articleBody">
+      
+        <h3 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h3><h4 id="별-찍기-8-2445번"><a href="#별-찍기-8-2445번" class="headerlink" title="별 찍기-8, 2445번"></a>별 찍기-8, 2445번</h4><p>예제를 보고 규칙을 유추한 뒤에 별을 찍어 보세요.<br>입력 : 5<br>출력 : </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">*        *</span><br><span class="line">**      **</span><br><span class="line">***    ***</span><br><span class="line">****  ****</span><br><span class="line">**********</span><br><span class="line">****  ****</span><br><span class="line">***    ***</span><br><span class="line">**      **</span><br><span class="line">*        *</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="풀이-과정"><a href="#풀이-과정" class="headerlink" title="풀이 과정"></a>풀이 과정</h3><p>위쪽의 5줄, 즉 n줄과 아래쪽의 4줄, 즉 n-1줄을 분리하여 분석, 출력하였다.<br><strong>위쪽 :</strong><br>첫째줄 : 1개의 별, 2(n-1)개의 공백, 1개의 별<br>둘째줄 : 2개의 별, 2(n-1)개의 공백, 2개의 별<br>⁝<br>n째줄 : n개의 별, 0개의 공백, n 개의 별을 출력한다.<br><strong>아래쪽 :</strong><br>첫째줄 : n-1개의 별, 2개의 공백, n-1개의 별<br>둘째줄 : n-2개의 별, 4개의 공백, n-1개의 별<br>⁝<br>n-1쨰줄 : n-(n-1)개의 별, 2(n-1)개의 공백, n-(n-1)개의 별 </p>
+<hr>
+<h3 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h3><pre><code>#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() &#123;
+
+    int n;
+    cin &gt;&gt; n;
+
+    for (int i = 1; i &lt;= n; i++)
+    &#123;
+        for (int j = 0; j &lt; i; j++)
+        &#123;
+            cout &lt;&lt; &quot;*&quot;;
+        &#125;
+
+        for (int k = i*2; k &lt; 2 * n  ; k++)
+        &#123;
+            cout &lt;&lt; &quot; &quot;;
+        &#125;
+        for (int j = 0; j &lt; i; j++)
+        &#123;
+            cout &lt;&lt; &quot;*&quot;;
+        &#125;
+        
+        cout &lt;&lt; endl;
+    &#125;
+    for (int i = 1; i &lt; n; i++)
+    &#123;
+        for (int j = i; j &lt; n; j++)
+        &#123;
+            cout &lt;&lt; &quot;*&quot;;
+        &#125;
+        for (int j = 0; j &lt; i * 2; j++)
+        &#123;
+            cout &lt;&lt; &quot; &quot;;
+        &#125;
+        for (int j = i; j &lt; n; j++)
+        &#123;
+            cout &lt;&lt; &quot;*&quot;;
+        &#125;
+
+        cout &lt;&lt; endl;
+    &#125;
+
+&#125;
+</code></pre>
+<hr>
+<h3 id="소감"><a href="#소감" class="headerlink" title="소감"></a>소감</h3><p>별 찍기 예제를 몇가지 더 풀어 보았지만, 그 중에서 그래도 나름 난이도가 있는 문제를 추렸다. C언어를 처음 배울 때 했던 예제와 비슷해서 떠올리는데 큰 어려움은 없었다.</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">알고리즘</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">Comments</h1>
+
+  
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-comments" data-href="https://kkcchh9999.github.io/2021/03/22/2445/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="as_sitesearch" value="kkcchh9999.github.io">
+  </form>
+</div>
+
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/%EB%A9%94%EC%9D%B8/">메인</a><small>1</small></li>
+  
+    <li><a href="/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">알고리즘</a><small>14</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2021 CheolHyeon
+  
+</div>
+<div class="clearfix"></div></footer>
+  
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+
+
+<script src="/js/gallery.js"></script>
+
+
+
+
+
+</body>
+</html>
