@@ -3,15 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>권철현의 코딩연습 | 코딩 연습</title>
+  <title>11720 | 코딩 연습</title>
   <meta name="author" content="CheolHyeon">
   
-  <meta name="description" content="알고리즘 연습, 과제, 프로젝트 등 전반적인 코딩 연습
-알고리즘C++로 진행, 백준의 기초적인 알고리즘 문제들을 풀이C++을 처음 접해보는 것이라 아주 기초부터 진행알고리즘 연습 : 알고리즘">
+  <meta name="description" content="문제숫자의 합, 11720번N개의 숫자가 공백 없이 쓰여있다. 이 숫자를 모두 합해서 출력하는 프로그램을 작성하시오.  
+입력 : 입력으로 주어진 숫자 N개의 합을 출력한다.
+
+풀이 과정N을 입력받고, char[] 안에 수를 저장받아 for루프로 합하여 출력한다. 캐릭">
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="권철현의 코딩연습"/>
+  <meta property="og:title" content="11720"/>
   <meta property="og:site_name" content="코딩 연습"/>
 
   
@@ -47,25 +49,49 @@
 <div class="clearfix"></div>
 </header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article id="post-main" class="h-entry post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article id="post-11720" class="h-entry post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   
   <div class="post-content">
     <header>
       
         <div class="icon"></div>
-        <time class="dt-published" datetime="2021-03-21T02:24:11.752Z"><a href="/2021/03/21/main/">2021-03-21</a></time>
+        <time class="dt-published" datetime="2021-03-21T19:51:47.000Z"><a href="/2021/03/21/11720/">2021-03-21</a></time>
       
       
   
-    <h1 class="p-name title" itemprop="headline name">권철현의 코딩연습</h1>
+    <h1 class="p-name title" itemprop="headline name">11720</h1>
   
 
     </header>
     <div class="e-content entry" itemprop="articleBody">
       
-        <h4 id="알고리즘-연습-과제-프로젝트-등-전반적인-코딩-연습"><a href="#알고리즘-연습-과제-프로젝트-등-전반적인-코딩-연습" class="headerlink" title="알고리즘 연습, 과제, 프로젝트 등 전반적인 코딩 연습"></a>알고리즘 연습, 과제, 프로젝트 등 전반적인 코딩 연습</h4><hr>
-<h3 id="알고리즘"><a href="#알고리즘" class="headerlink" title="알고리즘"></a>알고리즘</h3><p>C++로 진행, 백준의 기초적인 알고리즘 문제들을 풀이<br>C++을 처음 접해보는 것이라 아주 기초부터 진행<br>알고리즘 연습 : <a href="https://kkcchh9999.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">알고리즘</a> </p>
+        <h3 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h3><h5 id="숫자의-합-11720번"><a href="#숫자의-합-11720번" class="headerlink" title="숫자의 합, 11720번"></a>숫자의 합, 11720번</h5><p>N개의 숫자가 공백 없이 쓰여있다. 이 숫자를 모두 합해서 출력하는 프로그램을 작성하시오.  </p>
+<p>입력 : 입력으로 주어진 숫자 N개의 합을 출력한다.</p>
 <hr>
+<h3 id="풀이-과정"><a href="#풀이-과정" class="headerlink" title="풀이 과정"></a>풀이 과정</h3><p>N을 입력받고, char[] 안에 수를 저장받아 for루프로 합하여 출력한다. 캐릭터 배열은 문자열이니 string 으로 대체하여 풀었다. </p>
+<hr>
+<h3 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h3><pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+int main()
+&#123;
+    int t, sum = 0;
+    cin &gt;&gt; t;
+    string input;
+    cin &gt;&gt; input;
+    
+    for (int i = 0; i &lt; t; i++)
+    &#123;
+        sum = sum + input[i] - &#39;0&#39;;
+    &#125;
+    cout &lt;&lt; sum &lt;&lt; endl;
+    
+&#125;
+</code></pre>
+<hr>
+<h3 id="소감"><a href="#소감" class="headerlink" title="소감"></a>소감</h3><p>C++의 기본적인 입출력은 이제 조금씩 감이 잡히는 것 같다. 몇문제를 더 풀어보고 나서는 본격적인 알고리즘 풀이로 넘어가야겠다.</p>
 
       
     </div>
@@ -75,7 +101,7 @@
         
   
   <div class="tags">
-    <a href="/tags/%EB%A9%94%EC%9D%B8/">메인</a>
+    <a href="/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">알고리즘</a>
   </div>
 
         
@@ -101,7 +127,7 @@
   }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<div class="fb-comments" data-href="https://kkcchh9999.github.io/2021/03/21/main/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+<div class="fb-comments" data-href="https://kkcchh9999.github.io/2021/03/21/11720/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
       
   
 </section>
