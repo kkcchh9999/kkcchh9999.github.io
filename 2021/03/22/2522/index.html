@@ -27,13 +27,14 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="별 찍기-12">
 <meta property="og:url" content="https://kkcchh9999.github.io/2021/03/22/2522/index.html">
-<meta property="og:site_name" content="코딩 연습">
+<meta property="og:site_name" content="권철현의 코딩 연습">
 <meta property="og:description" content="문제별 찍기-12, 2522번예제를 보고 규칙을 유추한 뒤에 별을 찍어 보세요.입력 : 3   12345  * ***** **  *  풀이 과정이 문제 또한 다른 별찍기와 크게 다르지 않지만, 이 문제를 풀 때는 위와 아래로 분리하지 않고, 하나의 for 안에서 윗부분과 아랫부분을 모두 출력했다.입력이 n이고 for 루프의 i가 1 ~ 2n-1 일때, 각">
 <meta property="og:locale" content="ko_KR">
 <meta property="article:published_time" content="2021-03-22T05:45:24.000Z">
-<meta property="article:modified_time" content="2021-03-22T15:16:02.197Z">
+<meta property="article:modified_time" content="2021-03-22T17:13:18.479Z">
 <meta property="article:author" content="CheolHyeon">
-<meta property="article:tag" content="알고리즘">
+<meta property="article:tag" content="입출력">
+<meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
 
 
@@ -49,7 +50,7 @@
     lang   : 'ko'
   };
 </script>
-<title>별 찍기-12 | 코딩 연습</title>
+<title>별 찍기-12 | 권철현의 코딩 연습</title>
   
 
 
@@ -110,10 +111,10 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">코딩 연습</h1>
+      <h1 class="site-title">권철현의 코딩 연습</h1>
       <i class="logo-line"></i>
     </a>
-      <p class="site-subtitle" itemprop="description">알고리즘, 과제, 프로젝트 모음</p>
+      <p class="site-subtitle" itemprop="description">알고리즘 연습, 과제, 프로젝트 등등</p>
   </div>
 
   <div class="site-nav-right">
@@ -235,7 +236,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="코딩 연습">
+      <meta itemprop="name" content="권철현의 코딩 연습">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -257,8 +258,17 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-03-23 00:16:02" itemprop="dateModified" datetime="2021-03-23T00:16:02+09:00">2021-03-23</time>
+        <time title="Updated at: 2021-03-23 02:13:18" itemprop="dateModified" datetime="2021-03-23T02:13:18+09:00">2021-03-23</time>
       </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" itemprop="url" rel="index"><span itemprop="name">알고리즘</span></a>
+        </span>
+    </span>
 
   
 </div>
@@ -297,7 +307,9 @@ int main() &#123;
 </code></pre>
 <hr>
 <h3 id="소감"><a href="#소감" class="headerlink" title="소감"></a>소감</h3><p>이 문제의 해답은 처음에 위 아래를 분리하여 풀고 난 후에, 어떻게하면 한번에 위 아래를 다 출력할 수 있을지 답을 찾아봐서 알게 된 경우이다. 이 경우에 코드가 더 깔끔해지는 것 같고, 절대값을 표기하는 abs라는 함수도 알게되었다. 경우에 따라 절대값도 활용할 수 있도록 시야를 넓혀 갈 필요가 있겠다.</p>
+<blockquote>
 <p><strong>이 문제 이후에도 별 찍기 문제를 몇문제 더 풀었지만, 난이도도 그렇게 높지 않고, 새로운 C++ 함수를 알게 된 문제도 아니라서 포스팅은 하지 않고, 여기까지 입출력 문제에 해당하는 문제는 모두 풀었다. 다음 포스팅부터는 DP에 해당하는 문제이다.</strong></p>
+</blockquote>
 
     </div>
 
@@ -307,7 +319,8 @@ int main() &#123;
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" rel="tag"># 알고리즘</a>
+              <a href="/tags/%EC%9E%85%EC%B6%9C%EB%A0%A5/" rel="tag"># 입출력</a>
+              <a href="/tags/C/" rel="tag"># C++</a>
           </div>
 
         
