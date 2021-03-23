@@ -168,7 +168,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
@@ -181,7 +181,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">태그</span></a>
       </div>
   </nav>
@@ -210,6 +210,112 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://kkcchh9999.github.io/2021/03/21/11718/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="CheolHyeon">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="권철현의 코딩 연습">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/21/11718/" class="post-title-link" itemprop="url">그대로 출력하기</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+
+      <time title="Post created: 2021-03-21 14:36:27" itemprop="dateCreated datePublished" datetime="2021-03-21T14:36:27+09:00">2021-03-21</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-03-23 02:13:04" itemprop="dateModified" datetime="2021-03-23T02:13:04+09:00">2021-03-23</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" itemprop="url" rel="index"><span itemprop="name">알고리즘</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h3><h5 id="그대로-출력하기-11718번"><a href="#그대로-출력하기-11718번" class="headerlink" title="그대로 출력하기, 11718번"></a>그대로 출력하기, 11718번</h5><p>입력 받은 대로 출력하는 프로그램을 작성하시오.</p>
+<p>입력 : 입력이 주어진다. 입력은 최대 100줄로 이루어져 있고, 알파벳 소문자, 대문자, 공백, 숫자로만 이루어져 있다. 각 줄은 100글자를 넘지 않으며, 빈 줄은 주어지지 않는다. 또, 각 줄은 공백으로 시작하지 않고, 공백으로 끝나지 않는다. </p>
+<hr>
+<h3 id="풀이-과정"><a href="#풀이-과정" class="headerlink" title="풀이 과정"></a>풀이 과정</h3><p>공백까지 모두 string에 저장하기 위하여 <strong>getline</strong>함수를 활용하여 한 줄씩 입력받고, cout을 통하여 출력하는 행위를 while 루프를 통해 반복하였다.</p>
+<hr>
+<h3 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h3><pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main()
+&#123;
+    string a;
+    
+    while(true)
+    &#123;
+        getline(cin, a);
+        if(a == &quot;&quot;)
+        &#123;   
+            break;
+        &#125;
+        cout &lt;&lt; a &lt;&lt; endl;
+        
+    &#125;
+&#125;
+</code></pre>
+<hr>
+<h3 id="소감"><a href="#소감" class="headerlink" title="소감"></a>소감</h3><p>처음에는 cin으로 이렇게 저렇게 여러 시도를 했으나 문제에서 요구하는 바가 명확히 와닫지 않아서 결국 정답을 찾아보았다. 그 결과 <strong>getline</strong> 함수를 알게되었고, 이 함수는 한 줄 단위로 string을 받아오는 함수이다. A+B를 벗어나 조금 더 어려운 문제를 풀고 있다는 부분이 실감된다.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
