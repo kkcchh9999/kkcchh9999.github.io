@@ -23,16 +23,16 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"kkcchh9999.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
-<meta name="description" content="문제2 x n 타일링, 11726번2×n 크기의 직사각형을 1×2, 2×1 타일로 채우는 방법의 수를 구하는 프로그램을 작성하시오.아래 그림은 2×5 크기의 직사각형을 채운 한 가지 방법의 예이다.  입력 : 첫째 줄에 n이 주어진다.  출력 : 둘째 줄에 2×n 크기의 직사각형을 채우는 방법의 수를 10,007로 나눈 나머지를 출력한다.  풀이 과정DP[">
+<meta name="description" content="문제2 x n 타일링, 11726번2×n 크기의 직사각형을 1×2, 2×1 타일로 채우는 방법의 수를 구하는 프로그램을 작성하시오.아래 그림은 2×5 크기의 직사각형을 채운 한 가지 방법의 예이다.  입력 : 첫째 줄에 n이 주어진다.   출력 : 둘째 줄에 2×n 크기의 직사각형을 채우는 방법의 수를 10,007로 나눈 나머지를 출력한다.     풀이 과">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2 x n 타일링">
 <meta property="og:url" content="https://kkcchh9999.github.io/2021/03/28/11726/index.html">
 <meta property="og:site_name" content="권철현의 코딩 연습">
-<meta property="og:description" content="문제2 x n 타일링, 11726번2×n 크기의 직사각형을 1×2, 2×1 타일로 채우는 방법의 수를 구하는 프로그램을 작성하시오.아래 그림은 2×5 크기의 직사각형을 채운 한 가지 방법의 예이다.  입력 : 첫째 줄에 n이 주어진다.  출력 : 둘째 줄에 2×n 크기의 직사각형을 채우는 방법의 수를 10,007로 나눈 나머지를 출력한다.  풀이 과정DP[">
+<meta property="og:description" content="문제2 x n 타일링, 11726번2×n 크기의 직사각형을 1×2, 2×1 타일로 채우는 방법의 수를 구하는 프로그램을 작성하시오.아래 그림은 2×5 크기의 직사각형을 채운 한 가지 방법의 예이다.  입력 : 첫째 줄에 n이 주어진다.   출력 : 둘째 줄에 2×n 크기의 직사각형을 채우는 방법의 수를 10,007로 나눈 나머지를 출력한다.     풀이 과">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:image" content="https://onlinejudgeimages.s3-ap-northeast-1.amazonaws.com/problem/11726/1.png">
 <meta property="article:published_time" content="2021-03-28T03:48:30.000Z">
-<meta property="article:modified_time" content="2021-03-29T13:06:51.529Z">
+<meta property="article:modified_time" content="2021-03-29T16:47:45.640Z">
 <meta property="article:author" content="CheolHyeon">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="DP">
@@ -163,7 +163,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EB%AC%B8%EC%A0%9C"><span class="nav-number">1.</span> <span class="nav-text">문제</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-x-n-%ED%83%80%EC%9D%BC%EB%A7%81-11726%EB%B2%88"><span class="nav-number">1.0.1.</span> <span class="nav-text">2 x n 타일링, 11726번</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%B6%9C%EB%A0%A5-%EB%91%98%EC%A7%B8-%EC%A4%84%EC%97%90-2%C3%97n-%ED%81%AC%EA%B8%B0%EC%9D%98-%EC%A7%81%EC%82%AC%EA%B0%81%ED%98%95%EC%9D%84-%EC%B1%84%EC%9A%B0%EB%8A%94-%EB%B0%A9%EB%B2%95%EC%9D%98-%EC%88%98%EB%A5%BC-10-007%EB%A1%9C-%EB%82%98%EB%88%88-%EB%82%98%EB%A8%B8%EC%A7%80%EB%A5%BC-%EC%B6%9C%EB%A0%A5%ED%95%9C%EB%8B%A4"><span class="nav-number"></span> <span class="nav-text">출력 : 둘째 줄에 2×n 크기의 직사각형을 채우는 방법의 수를 10,007로 나눈 나머지를 출력한다.  </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%ED%92%80%EC%9D%B4-%EA%B3%BC%EC%A0%95"><span class="nav-number">1.</span> <span class="nav-text">풀이 과정</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EC%BD%94%EB%93%9C"><span class="nav-number">2.</span> <span class="nav-text">코드</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EC%86%8C%EA%B0%90"><span class="nav-number">3.</span> <span class="nav-text">소감</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EB%AC%B8%EC%A0%9C"><span class="nav-number">1.</span> <span class="nav-text">문제</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-x-n-%ED%83%80%EC%9D%BC%EB%A7%81-11726%EB%B2%88"><span class="nav-number">1.0.1.</span> <span class="nav-text">2 x n 타일링, 11726번</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%ED%92%80%EC%9D%B4-%EA%B3%BC%EC%A0%95"><span class="nav-number">2.</span> <span class="nav-text">풀이 과정</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EC%BD%94%EB%93%9C"><span class="nav-number">3.</span> <span class="nav-text">코드</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EC%86%8C%EA%B0%90"><span class="nav-number">4.</span> <span class="nav-text">소감</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -260,7 +260,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-03-29 22:06:51" itemprop="dateModified" datetime="2021-03-29T22:06:51+09:00">2021-03-29</time>
+        <time title="Updated at: 2021-03-30 01:47:45" itemprop="dateModified" datetime="2021-03-30T01:47:45+09:00">2021-03-30</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -284,9 +284,11 @@
     <div class="post-body" itemprop="articleBody">
         <h3 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h3><h5 id="2-x-n-타일링-11726번"><a href="#2-x-n-타일링-11726번" class="headerlink" title="2 x n 타일링, 11726번"></a>2 x n 타일링, 11726번</h5><p>2×n 크기의 직사각형을 1×2, 2×1 타일로 채우는 방법의 수를 구하는 프로그램을 작성하시오.<br>아래 그림은 2×5 크기의 직사각형을 채운 한 가지 방법의 예이다.</p>
 <center><img src="https://onlinejudgeimages.s3-ap-northeast-1.amazonaws.com/problem/11726/1.png" width="400" height="100"></center>
-입력 : 첫째 줄에 n이 주어진다.
+입력 : 첫째 줄에 n이 주어진다.  
+출력 : 둘째 줄에 2×n 크기의 직사각형을 채우는 방법의 수를 10,007로 나눈 나머지를 출력한다.  
 
-<h2 id="출력-둘째-줄에-2×n-크기의-직사각형을-채우는-방법의-수를-10-007로-나눈-나머지를-출력한다"><a href="#출력-둘째-줄에-2×n-크기의-직사각형을-채우는-방법의-수를-10-007로-나눈-나머지를-출력한다" class="headerlink" title="출력 : 둘째 줄에 2×n 크기의 직사각형을 채우는 방법의 수를 10,007로 나눈 나머지를 출력한다.  "></a>출력 : 둘째 줄에 2×n 크기의 직사각형을 채우는 방법의 수를 10,007로 나눈 나머지를 출력한다.  </h2><h3 id="풀이-과정"><a href="#풀이-과정" class="headerlink" title="풀이 과정"></a>풀이 과정</h3><p>DP[n]은 방법의 수라고 할 때, DP[1] 은 2x1 한장으로 이루어지고, DP[2] 는 1x2 두장 혹은 2x1 두장으로 이루어진다. DP[3] 은 DP[1]에 1x2 타일 두장을 쌓은 모양을 더한 방법과, DP[2]에 2x1 타일 한장을 더한 방법으로 이루어진다.<br>즉, DP[n] 은 DP[n-2]에 1x2 타일 두장을 쌓은 모양을 더한 방법과, DP[n-1]에 2x1 타일 한장을 더한 방법으로 이루어진다. 이를 10007로 나누어 가면서 DP 배열에 저장, DP[n]을 찾는다. </p>
+<hr>
+<h3 id="풀이-과정"><a href="#풀이-과정" class="headerlink" title="풀이 과정"></a>풀이 과정</h3><p>DP[n]은 방법의 수라고 할 때, DP[1] 은 2x1 한장으로 이루어지고, DP[2] 는 1x2 두장 혹은 2x1 두장으로 이루어진다. DP[3] 은 DP[1]에 1x2 타일 두장을 쌓은 모양을 더한 방법과, DP[2]에 2x1 타일 한장을 더한 방법으로 이루어진다.<br>즉, DP[n] 은 DP[n-2]에 1x2 타일 두장을 쌓은 모양을 더한 방법과, DP[n-1]에 2x1 타일 한장을 더한 방법으로 이루어진다. 이를 10007로 나누어 가면서 DP 배열에 저장, DP[n]을 찾는다. </p>
 <hr>
 <h3 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h3><pre><code>#include &lt;iostream&gt;
 

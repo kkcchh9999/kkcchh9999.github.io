@@ -250,7 +250,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-03-30 01:46:06" itemprop="dateModified" datetime="2021-03-30T01:46:06+09:00">2021-03-30</time>
+        <time title="Updated at: 2021-03-30 01:47:46" itemprop="dateModified" datetime="2021-03-30T01:47:46+09:00">2021-03-30</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -274,9 +274,11 @@
     <div class="post-body" itemprop="articleBody">
           <h3 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h3><h5 id="2-x-n-타일링-2-11727번"><a href="#2-x-n-타일링-2-11727번" class="headerlink" title="2 x n 타일링 2, 11727번"></a>2 x n 타일링 2, 11727번</h5><p>2×n 직사각형을 1×2, 2×1과 2×2 타일로 채우는 방법의 수를 구하는 프로그램을 작성하시오.<br>아래 그림은 2×17 직사각형을 채운 한가지 예이다.   </p>
 <center><img src="https://www.acmicpc.net/upload/images/t2n2122.gif" width="600" height="100"></center>
-입력 : 첫째 줄에 n이 주어진다.
+입력 : 첫째 줄에 n이 주어진다.  
+출력 : 둘째 줄에 2×n 크기의 직사각형을 채우는 방법의 수를 10,007로 나눈 나머지를 출력한다. 
 
-<h2 id="출력-둘째-줄에-2×n-크기의-직사각형을-채우는-방법의-수를-10-007로-나눈-나머지를-출력한다"><a href="#출력-둘째-줄에-2×n-크기의-직사각형을-채우는-방법의-수를-10-007로-나눈-나머지를-출력한다" class="headerlink" title="출력 : 둘째 줄에 2×n 크기의 직사각형을 채우는 방법의 수를 10,007로 나눈 나머지를 출력한다. "></a>출력 : 둘째 줄에 2×n 크기의 직사각형을 채우는 방법의 수를 10,007로 나눈 나머지를 출력한다. </h2><h3 id="풀이-과정"><a href="#풀이-과정" class="headerlink" title="풀이 과정"></a>풀이 과정</h3><p>이전에 풀었던 타일링과 같은 방법이지만, DP[n-2]에서 1x2 두장을 더하는 방법과, 2x2 한장을 더하는 방법까지 두 가지의 방법이 생겼기 때문에, <code>DP[n] = DP[n-1] + (DP[n-2] x 2)</code>를 이용하여 풀 수 있다. </p>
+<hr>
+<h3 id="풀이-과정"><a href="#풀이-과정" class="headerlink" title="풀이 과정"></a>풀이 과정</h3><p>이전에 풀었던 타일링과 같은 방법이지만, DP[n-2]에서 1x2 두장을 더하는 방법과, 2x2 한장을 더하는 방법까지 두 가지의 방법이 생겼기 때문에, <code>DP[n] = DP[n-1] + (DP[n-2] x 2)</code>를 이용하여 풀 수 있다. </p>
 <hr>
 <h3 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h3><pre><code>#include &lt;iostream&gt;
 
@@ -356,7 +358,7 @@ int main() &#123;
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-03-29 22:06:51" itemprop="dateModified" datetime="2021-03-29T22:06:51+09:00">2021-03-29</time>
+        <time title="Updated at: 2021-03-30 01:47:45" itemprop="dateModified" datetime="2021-03-30T01:47:45+09:00">2021-03-30</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -380,9 +382,11 @@ int main() &#123;
     <div class="post-body" itemprop="articleBody">
           <h3 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h3><h5 id="2-x-n-타일링-11726번"><a href="#2-x-n-타일링-11726번" class="headerlink" title="2 x n 타일링, 11726번"></a>2 x n 타일링, 11726번</h5><p>2×n 크기의 직사각형을 1×2, 2×1 타일로 채우는 방법의 수를 구하는 프로그램을 작성하시오.<br>아래 그림은 2×5 크기의 직사각형을 채운 한 가지 방법의 예이다.</p>
 <center><img src="https://onlinejudgeimages.s3-ap-northeast-1.amazonaws.com/problem/11726/1.png" width="400" height="100"></center>
-입력 : 첫째 줄에 n이 주어진다.
+입력 : 첫째 줄에 n이 주어진다.  
+출력 : 둘째 줄에 2×n 크기의 직사각형을 채우는 방법의 수를 10,007로 나눈 나머지를 출력한다.  
 
-<h2 id="출력-둘째-줄에-2×n-크기의-직사각형을-채우는-방법의-수를-10-007로-나눈-나머지를-출력한다"><a href="#출력-둘째-줄에-2×n-크기의-직사각형을-채우는-방법의-수를-10-007로-나눈-나머지를-출력한다" class="headerlink" title="출력 : 둘째 줄에 2×n 크기의 직사각형을 채우는 방법의 수를 10,007로 나눈 나머지를 출력한다.  "></a>출력 : 둘째 줄에 2×n 크기의 직사각형을 채우는 방법의 수를 10,007로 나눈 나머지를 출력한다.  </h2><h3 id="풀이-과정"><a href="#풀이-과정" class="headerlink" title="풀이 과정"></a>풀이 과정</h3><p>DP[n]은 방법의 수라고 할 때, DP[1] 은 2x1 한장으로 이루어지고, DP[2] 는 1x2 두장 혹은 2x1 두장으로 이루어진다. DP[3] 은 DP[1]에 1x2 타일 두장을 쌓은 모양을 더한 방법과, DP[2]에 2x1 타일 한장을 더한 방법으로 이루어진다.<br>즉, DP[n] 은 DP[n-2]에 1x2 타일 두장을 쌓은 모양을 더한 방법과, DP[n-1]에 2x1 타일 한장을 더한 방법으로 이루어진다. 이를 10007로 나누어 가면서 DP 배열에 저장, DP[n]을 찾는다. </p>
+<hr>
+<h3 id="풀이-과정"><a href="#풀이-과정" class="headerlink" title="풀이 과정"></a>풀이 과정</h3><p>DP[n]은 방법의 수라고 할 때, DP[1] 은 2x1 한장으로 이루어지고, DP[2] 는 1x2 두장 혹은 2x1 두장으로 이루어진다. DP[3] 은 DP[1]에 1x2 타일 두장을 쌓은 모양을 더한 방법과, DP[2]에 2x1 타일 한장을 더한 방법으로 이루어진다.<br>즉, DP[n] 은 DP[n-2]에 1x2 타일 두장을 쌓은 모양을 더한 방법과, DP[n-1]에 2x1 타일 한장을 더한 방법으로 이루어진다. 이를 10007로 나누어 가면서 DP 배열에 저장, DP[n]을 찾는다. </p>
 <hr>
 <h3 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h3><pre><code>#include &lt;iostream&gt;
 
