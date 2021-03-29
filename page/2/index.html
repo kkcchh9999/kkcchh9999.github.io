@@ -168,7 +168,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
@@ -210,6 +210,112 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://kkcchh9999.github.io/2021/03/21/11720/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="CheolHyeon">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="권철현의 코딩 연습">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/21/11720/" class="post-title-link" itemprop="url">숫자의 합</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+
+      <time title="Post created: 2021-03-22 04:51:47" itemprop="dateCreated datePublished" datetime="2021-03-22T04:51:47+09:00">2021-03-22</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-03-23 02:13:05" itemprop="dateModified" datetime="2021-03-23T02:13:05+09:00">2021-03-23</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" itemprop="url" rel="index"><span itemprop="name">알고리즘</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h3><h5 id="숫자의-합-11720번"><a href="#숫자의-합-11720번" class="headerlink" title="숫자의 합, 11720번"></a>숫자의 합, 11720번</h5><p>N개의 숫자가 공백 없이 쓰여있다. 이 숫자를 모두 합해서 출력하는 프로그램을 작성하시오.  </p>
+<p>입력 : 입력으로 주어진 숫자 N개의 합을 출력한다.</p>
+<hr>
+<h3 id="풀이-과정"><a href="#풀이-과정" class="headerlink" title="풀이 과정"></a>풀이 과정</h3><p>N을 입력받고, char[] 안에 수를 저장받아 for루프로 합하여 출력한다. 캐릭터 배열은 문자열이니 string 으로 대체하여 풀었다. </p>
+<hr>
+<h3 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h3><pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+int main()
+&#123;
+    int t, sum = 0;
+    cin &gt;&gt; t;
+    string input;
+    cin &gt;&gt; input;
+    
+    for (int i = 0; i &lt; t; i++)
+    &#123;
+        sum = sum + input[i] - &#39;0&#39;;
+    &#125;
+    cout &lt;&lt; sum &lt;&lt; endl;
+    
+&#125;
+</code></pre>
+<hr>
+<h3 id="소감"><a href="#소감" class="headerlink" title="소감"></a>소감</h3><p>C++의 기본적인 입출력은 이제 조금씩 감이 잡히는 것 같다. 몇문제를 더 풀어보고 나서는 본격적인 알고리즘 풀이로 넘어가야겠다.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 

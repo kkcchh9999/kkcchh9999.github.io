@@ -168,7 +168,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
@@ -210,6 +210,112 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://kkcchh9999.github.io/2021/03/28/11726/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="CheolHyeon">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="권철현의 코딩 연습">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/28/11726/" class="post-title-link" itemprop="url">2 x n 타일링</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+
+      <time title="Post created: 2021-03-28 12:48:30" itemprop="dateCreated datePublished" datetime="2021-03-28T12:48:30+09:00">2021-03-28</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-03-29 22:06:51" itemprop="dateModified" datetime="2021-03-29T22:06:51+09:00">2021-03-29</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" itemprop="url" rel="index"><span itemprop="name">알고리즘</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h3><h5 id="2-x-n-타일링-11726번"><a href="#2-x-n-타일링-11726번" class="headerlink" title="2 x n 타일링, 11726번"></a>2 x n 타일링, 11726번</h5><p>2×n 크기의 직사각형을 1×2, 2×1 타일로 채우는 방법의 수를 구하는 프로그램을 작성하시오.<br>아래 그림은 2×5 크기의 직사각형을 채운 한 가지 방법의 예이다.</p>
+<center><img src="https://onlinejudgeimages.s3-ap-northeast-1.amazonaws.com/problem/11726/1.png" width="400" height="100"></center>
+입력 : 첫째 줄에 n이 주어진다.
+
+<h2 id="출력-둘째-줄에-2×n-크기의-직사각형을-채우는-방법의-수를-10-007로-나눈-나머지를-출력한다"><a href="#출력-둘째-줄에-2×n-크기의-직사각형을-채우는-방법의-수를-10-007로-나눈-나머지를-출력한다" class="headerlink" title="출력 : 둘째 줄에 2×n 크기의 직사각형을 채우는 방법의 수를 10,007로 나눈 나머지를 출력한다.  "></a>출력 : 둘째 줄에 2×n 크기의 직사각형을 채우는 방법의 수를 10,007로 나눈 나머지를 출력한다.  </h2><h3 id="풀이-과정"><a href="#풀이-과정" class="headerlink" title="풀이 과정"></a>풀이 과정</h3><p>DP[n]은 방법의 수라고 할 때, DP[1] 은 2x1 한장으로 이루어지고, DP[2] 는 1x2 두장 혹은 2x1 두장으로 이루어진다. DP[3] 은 DP[1]에 1x2 타일 두장을 쌓은 모양을 더한 방법과, DP[2]에 2x1 타일 한장을 더한 방법으로 이루어진다.<br>즉, DP[n] 은 DP[n-2]에 1x2 타일 두장을 쌓은 모양을 더한 방법과, DP[n-1]에 2x1 타일 한장을 더한 방법으로 이루어진다. 이를 10007로 나누어 가면서 DP 배열에 저장, DP[n]을 찾는다. </p>
+<hr>
+<h3 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h3><pre><code>#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() &#123;
+
+    int DP[1001] = &#123; 0, &#125;;
+    int n = 0;
+
+    cin &gt;&gt; n; 
+    DP[1] = 1;
+    DP[2] = 2;
+    for (int i = 3; i &lt;= n; i++)
+    &#123;
+        DP[i] = (DP[i - 1] + DP[i - 2])%10007;
+    &#125;
+    cout &lt;&lt; DP[n] &lt;&lt; endl;
+&#125;
+</code></pre>
+<hr>
+<h3 id="소감"><a href="#소감" class="headerlink" title="소감"></a>소감</h3><p>이번 문제도 혼자 해결하지 못했다. n-1, n-2와의 관계로 해결하면 될 것 같다는 해결법에는 가까이 갔지만 블럭의 모양이다보니 겹치는 부분이 있을거라 생각하여 오히려 해답에서 멀어졌다. 조금 더 문제 풀이 수를 늘려서 이정도 문제는 쉽게 해결할 수 있도록 해야겠다. </p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -889,7 +995,7 @@ int main() &#123;
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-03-28 21:42:59" itemprop="dateModified" datetime="2021-03-28T21:42:59+09:00">2021-03-28</time>
+        <time title="Updated at: 2021-03-29 21:22:05" itemprop="dateModified" datetime="2021-03-29T21:22:05+09:00">2021-03-29</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -917,7 +1023,7 @@ int main() &#123;
 <hr>
 <h3 id="풀이-과정"><a href="#풀이-과정" class="headerlink" title="풀이 과정"></a>풀이 과정</h3><p>일주일은 7일이고, 이를 이용해 나머지 연산을 통하여 문제를 해결한다. x월일 경우, (1월의 일 수(31) + 2월의 일 수(28)+….(x-1)월의 일 수(??) + y )을 하면 총 몇일인지 변환이 가능하고, 여기에 % 7 연산을 한 결과에  따라 요일을 출력하는 방식으로 해결한다.</p>
 <hr>
-<h3 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line"></span><br><span class="line">	int x, y, tmp &#x3D; 0;</span><br><span class="line">	cin &gt;&gt; x &gt;&gt; y;</span><br><span class="line">	int sum &#x3D; 0;</span><br><span class="line"></span><br><span class="line">	int month[12] &#x3D; &#123; 31,28,31,30,31,30,31,31,30,31,30,31 &#125;;</span><br><span class="line">	string day[7] &#x3D; &#123; &quot;SUN&quot;, &quot;MON&quot;, &quot;TUE&quot;, &quot;WED&quot;, &quot;THU&quot;, &quot;FRI&quot;, &quot;SAT&quot; &#125;;</span><br><span class="line"></span><br><span class="line">	for (int i &#x3D; 0; i &lt; (x-1); i++)</span><br><span class="line">	&#123;</span><br><span class="line">		sum &#x3D; sum + month[i];</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	sum &#x3D; sum + y;</span><br><span class="line"></span><br><span class="line">	cout &lt;&lt; day[sum % 7] &lt;&lt; endl;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;  </span><br><span class="line">  </span><br><span class="line">---</span><br><span class="line">### 소감</span><br><span class="line">최초에는 배열을 활용하는 방법이 아니라 if의 조건을 여러개로 걸어서 </span><br></pre></td></tr></table></figure>
+<h3 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line"></span><br><span class="line">	int x, y, tmp &#x3D; 0;</span><br><span class="line">	cin &gt;&gt; x &gt;&gt; y;</span><br><span class="line">	int sum &#x3D; 0;</span><br><span class="line"></span><br><span class="line">	int month[12] &#x3D; &#123; 31,28,31,30,31,30,31,31,30,31,30,31 &#125;;</span><br><span class="line">	string day[7] &#x3D; &#123; &quot;SUN&quot;, &quot;MON&quot;, &quot;TUE&quot;, &quot;WED&quot;, &quot;THU&quot;, &quot;FRI&quot;, &quot;SAT&quot; &#125;;</span><br><span class="line"></span><br><span class="line">	for (int i &#x3D; 0; i &lt; (x-1); i++)</span><br><span class="line">	&#123;</span><br><span class="line">		sum &#x3D; sum + month[i];</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	sum &#x3D; sum + y;</span><br><span class="line"></span><br><span class="line">	cout &lt;&lt; day[sum % 7] &lt;&lt; endl;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;  </span><br><span class="line">  </span><br><span class="line">---</span><br><span class="line">### 소감</span><br><span class="line">최초에는 배열을 활용하는 방법이 아니라 if의 조건을 여러개로 걸어서 </span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>#include <iostream></p>
 <p>using namespace std;</p>
 <p>int main() {</p>
@@ -1159,112 +1265,6 @@ int main()
 </code></pre>
 <hr>
 <h3 id="소감"><a href="#소감" class="headerlink" title="소감"></a>소감</h3><p>sizeof 함수를 이용하여 배열의 길이를 알아내려 했는데, string subscript out of range라는 에러가 떴다. 이 에러가 왜 뜨는지에 대해서는 아직 알아내지 못했지만, C++에서는 .size() 함수를 제공하여 다른 방법으로 배열의 길이를 알아낼 수 있었기에 그 방법으로 해결하였다.</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://kkcchh9999.github.io/2021/03/21/11720/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="CheolHyeon">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="권철현의 코딩 연습">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/21/11720/" class="post-title-link" itemprop="url">숫자의 합</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-
-      <time title="Post created: 2021-03-22 04:51:47" itemprop="dateCreated datePublished" datetime="2021-03-22T04:51:47+09:00">2021-03-22</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-03-23 02:13:05" itemprop="dateModified" datetime="2021-03-23T02:13:05+09:00">2021-03-23</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" itemprop="url" rel="index"><span itemprop="name">알고리즘</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h3><h5 id="숫자의-합-11720번"><a href="#숫자의-합-11720번" class="headerlink" title="숫자의 합, 11720번"></a>숫자의 합, 11720번</h5><p>N개의 숫자가 공백 없이 쓰여있다. 이 숫자를 모두 합해서 출력하는 프로그램을 작성하시오.  </p>
-<p>입력 : 입력으로 주어진 숫자 N개의 합을 출력한다.</p>
-<hr>
-<h3 id="풀이-과정"><a href="#풀이-과정" class="headerlink" title="풀이 과정"></a>풀이 과정</h3><p>N을 입력받고, char[] 안에 수를 저장받아 for루프로 합하여 출력한다. 캐릭터 배열은 문자열이니 string 으로 대체하여 풀었다. </p>
-<hr>
-<h3 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h3><pre><code>#include &lt;iostream&gt;
-#include &lt;string&gt;
-
-using namespace std;
-
-int main()
-&#123;
-    int t, sum = 0;
-    cin &gt;&gt; t;
-    string input;
-    cin &gt;&gt; input;
-    
-    for (int i = 0; i &lt; t; i++)
-    &#123;
-        sum = sum + input[i] - &#39;0&#39;;
-    &#125;
-    cout &lt;&lt; sum &lt;&lt; endl;
-    
-&#125;
-</code></pre>
-<hr>
-<h3 id="소감"><a href="#소감" class="headerlink" title="소감"></a>소감</h3><p>C++의 기본적인 입출력은 이제 조금씩 감이 잡히는 것 같다. 몇문제를 더 풀어보고 나서는 본격적인 알고리즘 풀이로 넘어가야겠다.</p>
 
       
     </div>

@@ -23,22 +23,24 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"kkcchh9999.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
-<meta name="description" content="문제최소, 최대, 10818번N개의 정수가 주어진다. 이때, 최솟값과 최댓값을 구하는 프로그램을 작성하시오.   입력 : 첫째 줄에 정수의 개수 N (1 ≤ N ≤ 1,000,000)이 주어진다. 둘째 줄에는 N개의 정수를 공백으로 구분해서 주어진다. 모든 정수는 -1,000,000보다 크거나 같고, 1,000,000보다 작거나 같은 정수이다.  풀이 과정">
+<meta name="description" content="문제2 x n 타일링, 11726번2×n 크기의 직사각형을 1×2, 2×1 타일로 채우는 방법의 수를 구하는 프로그램을 작성하시오.아래 그림은 2×5 크기의 직사각형을 채운 한 가지 방법의 예이다.  입력 : 첫째 줄에 n이 주어진다.  출력 : 둘째 줄에 2×n 크기의 직사각형을 채우는 방법의 수를 10,007로 나눈 나머지를 출력한다.  풀이 과정DP[">
 <meta property="og:type" content="article">
-<meta property="og:title" content="최소, 최대">
-<meta property="og:url" content="https://kkcchh9999.github.io/2021/03/22/10818/index.html">
+<meta property="og:title" content="2 x n 타일링">
+<meta property="og:url" content="https://kkcchh9999.github.io/2021/03/28/11726/index.html">
 <meta property="og:site_name" content="권철현의 코딩 연습">
-<meta property="og:description" content="문제최소, 최대, 10818번N개의 정수가 주어진다. 이때, 최솟값과 최댓값을 구하는 프로그램을 작성하시오.   입력 : 첫째 줄에 정수의 개수 N (1 ≤ N ≤ 1,000,000)이 주어진다. 둘째 줄에는 N개의 정수를 공백으로 구분해서 주어진다. 모든 정수는 -1,000,000보다 크거나 같고, 1,000,000보다 작거나 같은 정수이다.  풀이 과정">
+<meta property="og:description" content="문제2 x n 타일링, 11726번2×n 크기의 직사각형을 1×2, 2×1 타일로 채우는 방법의 수를 구하는 프로그램을 작성하시오.아래 그림은 2×5 크기의 직사각형을 채운 한 가지 방법의 예이다.  입력 : 첫째 줄에 n이 주어진다.  출력 : 둘째 줄에 2×n 크기의 직사각형을 채우는 방법의 수를 10,007로 나눈 나머지를 출력한다.  풀이 과정DP[">
 <meta property="og:locale" content="ko_KR">
-<meta property="article:published_time" content="2021-03-22T05:09:38.000Z">
-<meta property="article:modified_time" content="2021-03-28T12:43:27.491Z">
+<meta property="og:image" content="https://onlinejudgeimages.s3-ap-northeast-1.amazonaws.com/problem/11726/1.png">
+<meta property="article:published_time" content="2021-03-28T03:48:30.000Z">
+<meta property="article:modified_time" content="2021-03-29T13:06:51.529Z">
 <meta property="article:author" content="CheolHyeon">
-<meta property="article:tag" content="입출력">
 <meta property="article:tag" content="C++">
+<meta property="article:tag" content="DP">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://onlinejudgeimages.s3-ap-northeast-1.amazonaws.com/problem/11726/1.png">
 
 
-<link rel="canonical" href="https://kkcchh9999.github.io/2021/03/22/10818/">
+<link rel="canonical" href="https://kkcchh9999.github.io/2021/03/28/11726/">
 
 
 <script class="page-configurations">
@@ -50,7 +52,7 @@
     lang   : 'ko'
   };
 </script>
-<title>최소, 최대 | 권철현의 코딩 연습</title>
+<title>2 x n 타일링 | 권철현의 코딩 연습</title>
   
 
 
@@ -161,7 +163,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EB%AC%B8%EC%A0%9C"><span class="nav-number">1.</span> <span class="nav-text">문제</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%EC%B5%9C%EC%86%8C-%EC%B5%9C%EB%8C%80-10818%EB%B2%88"><span class="nav-number">1.0.1.</span> <span class="nav-text">최소, 최대, 10818번</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%ED%92%80%EC%9D%B4-%EA%B3%BC%EC%A0%95"><span class="nav-number">2.</span> <span class="nav-text">풀이 과정</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EC%BD%94%EB%93%9C"><span class="nav-number">3.</span> <span class="nav-text">코드</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EC%86%8C%EA%B0%90"><span class="nav-number">4.</span> <span class="nav-text">소감</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EB%AC%B8%EC%A0%9C"><span class="nav-number">1.</span> <span class="nav-text">문제</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-x-n-%ED%83%80%EC%9D%BC%EB%A7%81-11726%EB%B2%88"><span class="nav-number">1.0.1.</span> <span class="nav-text">2 x n 타일링, 11726번</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%B6%9C%EB%A0%A5-%EB%91%98%EC%A7%B8-%EC%A4%84%EC%97%90-2%C3%97n-%ED%81%AC%EA%B8%B0%EC%9D%98-%EC%A7%81%EC%82%AC%EA%B0%81%ED%98%95%EC%9D%84-%EC%B1%84%EC%9A%B0%EB%8A%94-%EB%B0%A9%EB%B2%95%EC%9D%98-%EC%88%98%EB%A5%BC-10-007%EB%A1%9C-%EB%82%98%EB%88%88-%EB%82%98%EB%A8%B8%EC%A7%80%EB%A5%BC-%EC%B6%9C%EB%A0%A5%ED%95%9C%EB%8B%A4"><span class="nav-number"></span> <span class="nav-text">출력 : 둘째 줄에 2×n 크기의 직사각형을 채우는 방법의 수를 10,007로 나눈 나머지를 출력한다.  </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%ED%92%80%EC%9D%B4-%EA%B3%BC%EC%A0%95"><span class="nav-number">1.</span> <span class="nav-text">풀이 과정</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EC%BD%94%EB%93%9C"><span class="nav-number">2.</span> <span class="nav-text">코드</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EC%86%8C%EA%B0%90"><span class="nav-number">3.</span> <span class="nav-text">소감</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -227,7 +229,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://kkcchh9999.github.io/2021/03/22/10818/">
+    <link itemprop="mainEntityOfPage" href="https://kkcchh9999.github.io/2021/03/28/11726/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -240,7 +242,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          최소, 최대
+          2 x n 타일링
         </h1>
 
         <div class="post-meta-container">
@@ -251,14 +253,14 @@
       </span>
       <span class="post-meta-item-text">작성일</span>
 
-      <time title="Post created: 2021-03-22 14:09:38" itemprop="dateCreated datePublished" datetime="2021-03-22T14:09:38+09:00">2021-03-22</time>
+      <time title="Post created: 2021-03-28 12:48:30" itemprop="dateCreated datePublished" datetime="2021-03-28T12:48:30+09:00">2021-03-28</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-03-28 21:43:27" itemprop="dateModified" datetime="2021-03-28T21:43:27+09:00">2021-03-28</time>
+        <time title="Updated at: 2021-03-29 22:06:51" itemprop="dateModified" datetime="2021-03-29T22:06:51+09:00">2021-03-29</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -280,10 +282,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h3 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h3><h5 id="최소-최대-10818번"><a href="#최소-최대-10818번" class="headerlink" title="최소, 최대, 10818번"></a>최소, 최대, 10818번</h5><p>N개의 정수가 주어진다. 이때, 최솟값과 최댓값을 구하는 프로그램을 작성하시오.  </p>
-<p>입력 : 첫째 줄에 정수의 개수 N (1 ≤ N ≤ 1,000,000)이 주어진다. 둘째 줄에는 N개의 정수를 공백으로 구분해서 주어진다. 모든 정수는 -1,000,000보다 크거나 같고, 1,000,000보다 작거나 같은 정수이다.</p>
-<hr>
-<h3 id="풀이-과정"><a href="#풀이-과정" class="headerlink" title="풀이 과정"></a>풀이 과정</h3><p>최소값인 -1000000을 max, 최대값인 1000000을 min으로 두고, n번의 루프동안 cin으로 입력받는 수를 max와 min 각각 한번씩 비교하여, max보다 크면 max로 저장, min보다 작으면 min으로 저장하여 출력한다.</p>
+        <h3 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h3><h5 id="2-x-n-타일링-11726번"><a href="#2-x-n-타일링-11726번" class="headerlink" title="2 x n 타일링, 11726번"></a>2 x n 타일링, 11726번</h5><p>2×n 크기의 직사각형을 1×2, 2×1 타일로 채우는 방법의 수를 구하는 프로그램을 작성하시오.<br>아래 그림은 2×5 크기의 직사각형을 채운 한 가지 방법의 예이다.</p>
+<center><img src="https://onlinejudgeimages.s3-ap-northeast-1.amazonaws.com/problem/11726/1.png" width="400" height="100"></center>
+입력 : 첫째 줄에 n이 주어진다.
+
+<h2 id="출력-둘째-줄에-2×n-크기의-직사각형을-채우는-방법의-수를-10-007로-나눈-나머지를-출력한다"><a href="#출력-둘째-줄에-2×n-크기의-직사각형을-채우는-방법의-수를-10-007로-나눈-나머지를-출력한다" class="headerlink" title="출력 : 둘째 줄에 2×n 크기의 직사각형을 채우는 방법의 수를 10,007로 나눈 나머지를 출력한다.  "></a>출력 : 둘째 줄에 2×n 크기의 직사각형을 채우는 방법의 수를 10,007로 나눈 나머지를 출력한다.  </h2><h3 id="풀이-과정"><a href="#풀이-과정" class="headerlink" title="풀이 과정"></a>풀이 과정</h3><p>DP[n]은 방법의 수라고 할 때, DP[1] 은 2x1 한장으로 이루어지고, DP[2] 는 1x2 두장 혹은 2x1 두장으로 이루어진다. DP[3] 은 DP[1]에 1x2 타일 두장을 쌓은 모양을 더한 방법과, DP[2]에 2x1 타일 한장을 더한 방법으로 이루어진다.<br>즉, DP[n] 은 DP[n-2]에 1x2 타일 두장을 쌓은 모양을 더한 방법과, DP[n-1]에 2x1 타일 한장을 더한 방법으로 이루어진다. 이를 10007로 나누어 가면서 DP 배열에 저장, DP[n]을 찾는다. </p>
 <hr>
 <h3 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h3><pre><code>#include &lt;iostream&gt;
 
@@ -291,30 +294,21 @@ using namespace std;
 
 int main() &#123;
 
-    int n;
-    int max = -1000000, min = 1000000;
-    int tmp;
+    int DP[1001] = &#123; 0, &#125;;
+    int n = 0;
 
-    cin &gt;&gt; n;
-    
-    for (int i = 0; i &lt; n; i++)
+    cin &gt;&gt; n; 
+    DP[1] = 1;
+    DP[2] = 2;
+    for (int i = 3; i &lt;= n; i++)
     &#123;
-        cin &gt;&gt; tmp;
-        if (max &lt; tmp)
-        &#123;
-            max = tmp;
-        &#125;
-        if (min &gt; tmp)
-        &#123;
-            min = tmp;
-        &#125;
+        DP[i] = (DP[i - 1] + DP[i - 2])%10007;
     &#125;
-    cout &lt;&lt; min &lt;&lt; &quot; &quot; &lt;&lt; max &lt;&lt; endl;
-
+    cout &lt;&lt; DP[n] &lt;&lt; endl;
 &#125;
 </code></pre>
 <hr>
-<h3 id="소감"><a href="#소감" class="headerlink" title="소감"></a>소감</h3><p>최대 1000000개의 입력이 들어오기 때문에, 모든 입력을 다 받은 후에 비교하는것은 불가능해보였고, 입력이 들어올때마다 비교하여 저장하고 출력하는 방식을 선택했다. 이제 슬슬 1학년때 처음 C언어를 배우던 때의 과제 정도의 수준을 갖는 문제가 나오고 있는 것 같다. 입력값의 범위를 잘못 보아 한번 틀렸는데, 문제를 잘 읽도록 해야겠다.</p>
+<h3 id="소감"><a href="#소감" class="headerlink" title="소감"></a>소감</h3><p>이번 문제도 혼자 해결하지 못했다. n-1, n-2와의 관계로 해결하면 될 것 같다는 해결법에는 가까이 갔지만 블럭의 모양이다보니 겹치는 부분이 있을거라 생각하여 오히려 해답에서 멀어졌다. 조금 더 문제 풀이 수를 늘려서 이정도 문제는 쉽게 해결할 수 있도록 해야겠다. </p>
 
     </div>
 
@@ -324,22 +318,19 @@ int main() &#123;
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%EC%9E%85%EC%B6%9C%EB%A0%A5/" rel="tag"># 입출력</a>
               <a href="/tags/C/" rel="tag"># C++</a>
+              <a href="/tags/DP/" rel="tag"># DP</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/03/22/8393/" rel="prev" title="합">
-                  <i class="fa fa-chevron-left"></i> 합
+                <a href="/2021/03/23/main/" rel="prev" title="권철현의 코딩연습">
+                  <i class="fa fa-chevron-left"></i> 권철현의 코딩연습
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/03/22/2445/" rel="next" title="별 찍기-8">
-                  별 찍기-8 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
