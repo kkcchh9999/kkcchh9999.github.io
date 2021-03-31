@@ -168,7 +168,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-count">20</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
@@ -210,6 +210,106 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://kkcchh9999.github.io/2021/03/21/2741/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="CheolHyeon">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="권철현의 코딩 연습">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/21/2741/" class="post-title-link" itemprop="url">N찍기</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+
+      <time title="Post created: 2021-03-22 05:57:18" itemprop="dateCreated datePublished" datetime="2021-03-22T05:57:18+09:00">2021-03-22</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-03-23 02:13:28" itemprop="dateModified" datetime="2021-03-23T02:13:28+09:00">2021-03-23</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" itemprop="url" rel="index"><span itemprop="name">알고리즘</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h3><h5 id="N찍기-2741번"><a href="#N찍기-2741번" class="headerlink" title="N찍기, 2741번"></a>N찍기, 2741번</h5><p>자연수 N이 주어졌을 때, 1부터 N까지 한 줄에 하나씩 출력하는 프로그램을 작성하시오.</p>
+<hr>
+<h3 id="풀이-과정"><a href="#풀이-과정" class="headerlink" title="풀이 과정"></a>풀이 과정</h3><p>단순히 for을 통하여 반복하면서 수를 출력하는 문제인데, </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">for(int i &#x3D; 0 ; i&lt;N; i++)</span><br><span class="line">	cout &lt;&lt; i &lt;&lt; endl;</span><br></pre></td></tr></table></figure>
+<p>로 진행하니까 시간초과가 떴다. endl을 단순 개항문자 \n 으로 바꿔주니 성공했다.</p>
+<hr>
+<h3 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h3><pre><code>#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()&#123;
+    int t;
+    cin &gt;&gt; t;
+    for(int i = 1; i &lt;= t; i++)
+    &#123;
+        cout &lt;&lt; i &lt;&lt; &#39;\n&#39;;
+    &#125;    
+&#125;
+</code></pre>
+<hr>
+<h3 id="소감"><a href="#소감" class="headerlink" title="소감"></a>소감</h3><p>말도 안돼는 너무 쉬운 문제라서, 문제의 순서를 가이드 해주는 블로그의 게시글이 잘못 된 줄 알았으나, 그에 보답하듯 보란듯이 문제를 틀려버렸다. 도저히 O(N) 이하의 시간복잡도를 갖도록 구성하는 방법을 모르겠어서 찾아 본 결과, endl은 개행과 동시에 버퍼를 비워주기 때문에 \n을 출력하는것보다 시간이 오래걸린다고 한다. 따라서 실행시간을 줄이기 위해서는 \n을 쓰는게 낫다고 한다. </p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
