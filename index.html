@@ -121,7 +121,6 @@
 
 <nav class="site-nav">
   <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>홈</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>태그</a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>카테고리</a></li>
         <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브</a></li>
@@ -168,20 +167,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-count">21</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">카테고리</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">태그</span></a>
       </div>
   </nav>
@@ -210,6 +209,80 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://kkcchh9999.github.io/2021/04/28/Kotlin-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="CheolHyeon">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="권철현의 코딩 연습">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/28/Kotlin-1/" class="post-title-link" itemprop="url">Kotlin - 시작</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+      
+
+      <time title="Post created: 2021-04-29 03:51:32 / Updated at: 12:58:15" itemprop="dateCreated datePublished" datetime="2021-04-29T03:51:32+09:00">2021-04-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%EC%BD%94%ED%8B%80%EB%A6%B0/" itemprop="url" rel="index"><span itemprop="name">코틀린</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Read-Me"><a href="#Read-Me" class="headerlink" title="Read Me"></a>Read Me</h3><p>앱 개발 분야로 관심이 생겨서 코틀린을 공부 한 후에, 안드로이드 공부를 할 예정.<br><code>Do it! 코틀린 프로그래밍</code> 을 사용하여 독학 할 예정이며, 책에 나와있는 가이드라인을 따라 갈 예정.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -250,7 +323,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-03-31 09:46:54" itemprop="dateModified" datetime="2021-03-31T09:46:54+09:00">2021-03-31</time>
+        <time title="Updated at: 2021-04-06 15:55:10" itemprop="dateModified" datetime="2021-04-06T15:55:10+09:00">2021-04-06</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -286,7 +359,7 @@
 <p>입력 : 첫째 줄에 테스트 케이스의 개수 T가 주어진다. 각 테스트 케이스는 한 줄로 이루어져 있고, 정수 n이 주어진다. n은 양수이며 11보다 작다. </p>
 <p>출력 : 각 테스트 케이스마다, n을 1, 2, 3의 합으로 나타내는 방법의 수를 출력한다.  </p>
 <hr>
-<h3 id="풀이-과정"><a href="#풀이-과정" class="headerlink" title="풀이 과정"></a>풀이 과정</h3><p>DP[n]이 n에 대한 방법의 수 일때 DP[n]은 DP[n-1] + 1, DP[n-2] + 2, DP[n-3] + 3 이 세 가지의 방법으로 만들어 질 수 있다. 이를 이용하여 DP[n]을 구한다.</p>
+<h3 id="풀이-과정"><a href="#풀이-과정" class="headerlink" title="풀이 과정"></a>풀이 과정</h3><p>DP[n]이 n에 대한 방법의 수 일때 DP[n]은 DP[n-1] + 1, DP[n-2] + 2, DP[n-3] + 3 이 세 가지의 방법으로 만들어 질 수 있다. 따라서 <code>DP[n] = DP[n-1]+1 + DP[n-2]+2 + DP[n-3]+3</code> 이라고 볼 수 있다. 이를 이용하여 풀이한다.</p>
 <hr>
 <h3 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h3><pre><code>#include &lt;iostream&gt;
 
@@ -313,7 +386,7 @@ int main() &#123;
 
 </code></pre>
 <hr>
-<h3 id="소감"><a href="#소감" class="headerlink" title="소감"></a>소감</h3><p>결국 이 문제도 DP라는 큰 틀 안에 있어서 풀이 방법이 이전에 풀었던 문제들과 비슷한 것 같다. 하지만 DP라고 알고 있었다고 해도 풀이 방법을 찾는데 생각보다 오래 걸렸다. 좀 더 많은 유형을 풀어보고 문제에 써있는 n을 구하겠다는것 보다 DP 문제라는 큰 장르를 분석해서 해결할 수 있도록 해야겠다.</p>
+<h3 id="소감"><a href="#소감" class="headerlink" title="소감"></a>소감</h3><p>결국 이 문제도 DP라는 큰 틀 안에 있어서 풀이 방법이 이전에 풀었던 문제들과 비슷한 것 같다. 하지만 DP라고 알고 있었다고 해도 풀이 방법을 찾는데 생각보다 오래 걸렸다. 좀 더 많은 유형을 풀어보고 문제의 n을 구하겠다는것 보다 DP 문제라는 큰 장르를 분석해서 해결할 수 있도록 해야겠다.</p>
 
       
     </div>
@@ -1187,127 +1260,8 @@ int main() &#123;
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://kkcchh9999.github.io/2021/03/21/1924/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="CheolHyeon">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="권철현의 코딩 연습">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/21/1924/" class="post-title-link" itemprop="url">2007년</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-
-      <time title="Post created: 2021-03-22 06:05:08" itemprop="dateCreated datePublished" datetime="2021-03-22T06:05:08+09:00">2021-03-22</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-03-29 21:22:05" itemprop="dateModified" datetime="2021-03-29T21:22:05+09:00">2021-03-29</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/" itemprop="url" rel="index"><span itemprop="name">알고리즘</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h3><h5 id="2007년-1924번"><a href="#2007년-1924번" class="headerlink" title="2007년, 1924번"></a>2007년, 1924번</h5><p>오늘은 2007년 1월 1일 월요일이다. 그렇다면 2007년 x월 y일은 무슨 요일일까? 이를 알아내는 프로그램을 작성하시오.</p>
-<p>입력 : 첫째 줄에 빈 칸을 사이에 두고 x(1 ≤ x ≤ 12)와 y(1 ≤ y ≤ 31)이 주어진다. 참고로 2007년에는 1, 3, 5, 7, 8, 10, 12월은 31일까지, 4, 6, 9, 11월은 30일까지, 2월은 28일까지 있다.</p>
-<p>출력 : 첫째 줄에 x월 y일이 무슨 요일인지에 따라 SUN, MON, TUE, WED, THU, FRI, SAT중 하나를 출력한다.</p>
-<hr>
-<h3 id="풀이-과정"><a href="#풀이-과정" class="headerlink" title="풀이 과정"></a>풀이 과정</h3><p>일주일은 7일이고, 이를 이용해 나머지 연산을 통하여 문제를 해결한다. x월일 경우, (1월의 일 수(31) + 2월의 일 수(28)+….(x-1)월의 일 수(??) + y )을 하면 총 몇일인지 변환이 가능하고, 여기에 % 7 연산을 한 결과에  따라 요일을 출력하는 방식으로 해결한다.</p>
-<hr>
-<h3 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line"></span><br><span class="line">	int x, y, tmp &#x3D; 0;</span><br><span class="line">	cin &gt;&gt; x &gt;&gt; y;</span><br><span class="line">	int sum &#x3D; 0;</span><br><span class="line"></span><br><span class="line">	int month[12] &#x3D; &#123; 31,28,31,30,31,30,31,31,30,31,30,31 &#125;;</span><br><span class="line">	string day[7] &#x3D; &#123; &quot;SUN&quot;, &quot;MON&quot;, &quot;TUE&quot;, &quot;WED&quot;, &quot;THU&quot;, &quot;FRI&quot;, &quot;SAT&quot; &#125;;</span><br><span class="line"></span><br><span class="line">	for (int i &#x3D; 0; i &lt; (x-1); i++)</span><br><span class="line">	&#123;</span><br><span class="line">		sum &#x3D; sum + month[i];</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	sum &#x3D; sum + y;</span><br><span class="line"></span><br><span class="line">	cout &lt;&lt; day[sum % 7] &lt;&lt; endl;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;  </span><br><span class="line">  </span><br><span class="line">---</span><br><span class="line">### 소감</span><br><span class="line">최초에는 배열을 활용하는 방법이 아니라 if의 조건을 여러개로 걸어서 </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>#include <iostream></p>
-<p>using namespace std;</p>
-<p>int main() {</p>
-<pre><code>int x, y, tmp = 0;
-cin &gt;&gt; x &gt;&gt; y;
-
-for (int i = 1; i &lt; x; i++)
-&#123;
-    if (i == 1 || i == 3 || i == 5 || i == 7 || i == 8 || i == 10 || i == 12)
-        tmp = tmp + 31;
-    else if (i == 2)
-        tmp = tmp + 28;
-    else
-        tmp = tmp + 30;
-&#125;
-tmp = tmp + y;
-if (tmp % 7 == 1)
-    cout &lt;&lt; &quot;MON&quot; &lt;&lt; endl;
-else if (tmp % 7 == 2)
-    cout &lt;&lt; &quot;TUE&quot; &lt;&lt; endl;
-else if (tmp % 7 == 3)
-    cout &lt;&lt; &quot;WED&quot; &lt;&lt; endl;
-else if (tmp % 7 == 4)
-    cout &lt;&lt; &quot;THR&quot; &lt;&lt; endl;
-else if (tmp % 7 == 5)
-    cout &lt;&lt; &quot;FRI&quot; &lt;&lt; endl;
-else if (tmp % 7 == 6)
-    cout &lt;&lt; &quot;SAT&quot; &lt;&lt; endl;
-else
-    cout &lt;&lt; &quot;SON&quot; &lt;&lt; endl;
-</code></pre>
-<p>}</p>
-<p>```<br>이와 같은 방법을 사용했었다. 하지만 오답이 나왔고, 왜 틀린건지 알 수 없어서 답을 찾아보았다. 결론부터 말하자면 처음 사용한 문제 해결 방법이 틀리지는 않았다. 다만 요일을 표기하는 알파벳이 오타가 있어서 오답 처리되었다. 덕분에 답을 찾게 되면서 배열을 사용하는 더 깔끔한 방법을 찾을 수 있었다. 비교 연산의 수가 줄게 되니 속도도 더 빨라질 것 같다. 앞으로는 정답을 맞추더라도 답을 찾아보아야겠다.</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
   </nav>
 
 
@@ -1369,6 +1323,16 @@ else
 
 
 
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.1.0/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink.listen({
+        timeout : 3000,
+        priority: true,
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://kkcchh9999.github.io/',]
+      });
+      });
+  </script>
 
 </body>
 </html>
