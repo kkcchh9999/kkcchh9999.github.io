@@ -135,7 +135,7 @@ footer:
       url: "https://github.com/kkcchh9999"
       
     - label: "NOSLab"
-      icon: "fab fa-fw fa-gitlab"
+      icon: "fab fa-fw fa-github"
       url: "https://noslab.github.io/"
       
     - label: "Bitbucket"
@@ -291,7 +291,4 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: false
-      comments: false
-      share: true
-      related: false
+      
