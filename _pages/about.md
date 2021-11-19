@@ -1,7 +1,7 @@
 ---
 title: "CheolHyeon's Blog"
 layout: single
-permalink: /abuot
+permalink: /abuot/
 author_profile: true
 ---
 
