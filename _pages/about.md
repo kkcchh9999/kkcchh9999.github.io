@@ -1,6 +1,5 @@
 ---
 title: "CheolHyeon's Blog"
-permalink: /about/
 layout: single
 author_profile: true
 ---
