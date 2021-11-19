@@ -1,10 +1,11 @@
 ---
-title: "블로그 소개"
+title: "CheolHyeon's Blog"
 permalink: /about/
 layout: single
 ---
 
-## CheolHyeon's 블로그
+### CheolHyeon Kwon
+- 1999.02.08 울산 출생
 - 창원대학교 3학년 재학중 
 - NOSLab 인턴 진행중 
 - kkcchh9999@changwon.ac.kr
