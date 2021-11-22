@@ -8,3 +8,11 @@ main:
     url: /tags/
   # - title: "Sitemap"
   #   url: /sitemap/
+
+docs: 
+  - title: "목차"
+    children:
+    - title: "Category"
+      url: /categories/
+    - title: "Tags"
+      url: /tags/
