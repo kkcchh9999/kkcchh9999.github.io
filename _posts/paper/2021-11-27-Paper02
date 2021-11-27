@@ -1,0 +1,12 @@
+---
+title:  "I/O Stack Optimization for Smartphones 번역"
+excerpt: "스마트폰을 위한 I/O 스택 최적화 논문 번역"
+categories:
+  - Papers
+tags:
+  - [android, papers]
+toc: true
+toc_sticky: true
+sidebar: 
+  nav: "docs"
+---
