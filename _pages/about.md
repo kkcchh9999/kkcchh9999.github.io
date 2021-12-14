@@ -9,7 +9,7 @@ author_profile: true
 - 1999.02.08 울산 출생
 - 창원대학교 3학년 재학중 
 - NOSLab 인턴 진행중 
-- kkcchh9999@changwon.ac.kr
+- cheolhyeon@gs.cwnu.ac.kr
 
 #### Interesting at 
 - Android Programming
