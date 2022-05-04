@@ -1,0 +1,20 @@
+---
+title:  "Say Goodbye to Off-heap Caches! On-heap Caches Using Memory-Mapped I.O 용어"
+excerpt: "논문에서 나오는 용어 정리"
+categories:
+  - Words
+tags:
+  - [words]
+toc: true
+toc_sticky: true
+sidebar: 
+  nav: "docs"
+---
+
+### 용어 정리
+논문을 읽다가 어려웠던 용어, 약어들을 정리했다.
+
+---
+- `serdes`: serialization, 직렬화는 컴퓨터 과학의 데이터 스토리지 문맥에서 데이터 구조나 오브젝트 상태를 동일하거나 다른 컴퓨터 환경에 저장(이를테면 파일이나 메모리 버퍼에서, 또는 네트워크 연결 링크 간 전송)하고 나중에 재구성할 수 있는 포맷으로 변환하는 과정이다. deserialization은 역직렬화로, 위의 반대 과정이다.
+- `mmap`: 메모리 매핑을 위한 시스템 콜 
+- `Memory Mapped I/O`: 메모리와 I/O가 연속된 주소에 할당. 즉, CPU의 입장에서는 메모리와 I/O가 동일한 외부 기기로 간주됨
