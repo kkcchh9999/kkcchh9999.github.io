@@ -1,11 +1,11 @@
 ---
-title: "CheolHyeon's Blog"
+title: "Cheolhyeon's Blog"
 permalink: /about/
 layout: single
 author_profile: true
 ---
 
-## CheolHyeon Kwon
+## Cheolhyeon Kwon
 - 1999.02.08 울산 출생
 - 창원대학교 4학년 재학중 
 - NOSLab 학부 연구생 과정 진행중 
